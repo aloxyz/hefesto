@@ -1,110 +1,143 @@
+/*========================================
+  Variables & Global Reset
+========================================*/
+:root {
+  --color-light: #a0f0ff;
+  --color-dark: #70c0cf;
+  --bg-gradient-start: #2a4e5e;
+  --bg-gradient-end: #000000;
+  --font: monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*========================================
+  Base Styles
+========================================*/
+body {
+  font-family: var(--font);
+  font-size: 12px;
+  color: var(--color-dark);
+  background-color: #000;
+  background-image: linear-gradient(0deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 90%);
+  background-size: 4px 4px;
+  animation: moveLines 0.1s linear infinite;
+  
+  /* Layout centering */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/*========================================
+  Animations
+========================================*/
 @keyframes moveLines {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 4px 4px; /* Muove le righe di 4px */
-  }
+  0% { background-position: 0 0; }
+  100% { background-position: 4px 4px; }
 }
 
 @keyframes flicker {
-    0% { 
-    color: #70c0cf;
+  0% {
+    color: var(--color-dark);
     text-shadow: 0 0 10px rgba(100, 100, 155, 0.8);
-    }
-    100% {
-    color: #a0f0ff;
-    text-shadow: 0 0 20px rgba(200, 200, 255, 1);
-    }
   }
-
-
-#fire, #text-logo {
-    animation: flicker 0.03s infinite alternate ease-in-out;
-    text-align: center;
-    white-space: pre;
-
-}
-
-.fire {
-  font-size: 2vw;
-}
-
-header {
-  font-size: 1vw;
-}
-
-b, h1, h2 {
-  animation: flicker .03s infinite alternate ease-in-out;
-}
-
-h2 {
-  font-size: large;
-}
-
-h2::after {
-  margin-left: 0.2em;
-  content: "";
-  width: 0.3em;
-  height: 0.8em;
-  background: #70c0cf;
-  display: inline-block;
-  animation: cursor-blink 0.3s infinite alternate ease-in-out;
+  100% {
+    color: var(--color-light);
+    text-shadow: 0 0 20px rgba(200, 200, 255, 1);
+  }
 }
 
 @keyframes cursor-blink {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    color: #a0f0ff;
-    text-shadow: 0 0 20px rgba(200, 200, 255, 1);
-    }
-}
-
-
-
-body {
-  color: #70c0cf;
-  background-color: #000000;
-  opacity: 1;
-  background-image: linear-gradient(0deg, #2a4e5e 0%, #000000 90%);
-  background-size: 4px 4px;
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  animation: moveLines 0.1s linear infinite; /* Anima lo sfondo */
-
-  font-family: monospace;
-  text-align: center;
-  font-size: 12px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  place-items: center;
-  flex-direction: column;
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 header {
   border: 0.1rem double;
-  margin: 10em;
-  animation: flicker 0.1s infinite alternate ease-in-out;
+  margin: 1em auto;
   max-width: 80em;
+  animation: flicker 0.1s infinite alternate ease-in-out;
+  padding: 3em;
 }
 
-section {
-  width: 90%;
-  word-wrap: break-word; /* Per spezzare le parole lunghe */
-  overflow-wrap: break-word; /* Per garantire il wrapping su tutti i browser */
-  text-align: center;
-  white-space: normal; /* Assicura che il testo vada a capo */
-  max-width: 50em;
+/* ASCII Art: Fire & Text Logo */
+#fire, #text-logo {
+  animation: flicker 0.03s infinite alternate ease-in-out;
+  white-space: pre;
+}
+
+h2 {
+  font-size: large;
+  position: relative;
+  
+  margin-bottom: 1em;
+}
+
+h2::after {
+  content: "";
+  display: inline-block;
+  margin-left: 0.2em;
+  width: 0.3em;
+  height: 0.8em;
+  background: var(--color-dark);
+  animation: cursor-blink 0.3s infinite alternate ease-in-out;
+}
+
+p, h1, h2, h3 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+a, b {
+  color: var(--color-dark);
+  animation: flicker 0.03s infinite alternate ease-in-out;
 }
 
 main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 90%;
+  max-width: 50em;
+  margin: 2em auto;
+}
+
+section {
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Horizontal Rule */
+hr {
+  width: 100%;
+  margin: 2em 0;
+  background-color: var(--color-light);
+  border-color: var(--color-dark);
+}
+
+/*========================================
+  Footer
+========================================*/
+footer {
+  padding: 1em 0;
+  font-size: 0.8em;
+}
+
+/*========================================
+  Responsive Adjustments
+========================================*/
+@media (max-width: 600px) {
+  #text-logo {
+    font-size: 1vw;
+  }
+  body {
+    margin: 5em auto;
+  }
 }
