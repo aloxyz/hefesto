@@ -33,6 +33,7 @@ header {
 }
 
 body {
+  color: #70c0cf;
   background-color: #FFFFFF;
   opacity: 1;
   background-image: linear-gradient(0deg, #000000 90%, #70c0cf 0%);
@@ -58,5 +59,9 @@ header {
 }
 
 section {
-  border-top: solid 0.1px;
+  width: 90%;
+  word-wrap: break-word; /* Per spezzare le parole lunghe */
+  overflow-wrap: break-word; /* Per garantire il wrapping su tutti i browser */
+  text-align: center;
+  white-space: normal; /* Assicura che il testo vada a capo */
 }
