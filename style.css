@@ -65,3 +65,9 @@ section {
   text-align: center;
   white-space: normal; /* Assicura che il testo vada a capo */
 }
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
