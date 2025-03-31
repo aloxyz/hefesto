@@ -117,6 +117,7 @@ section {
 /* Horizontal Rule */
 hr {
   width: 100%;
+  max-width: 80vh;
   margin: 2em 0;
   background-color: var(--color-light);
   border-color: var(--color-dark);
@@ -133,7 +134,7 @@ footer {
 /*========================================
   Responsive Adjustments
 ========================================*/
-@media (max-width: 600px) {
+@media (max-width: 80vh) {
   #text-logo {
     font-size: 1vw;
   }
