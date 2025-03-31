@@ -19,9 +19,11 @@
   }
 
 
-.fire, #text-logo {
+#fire, #text-logo {
     animation: flicker 0.1s infinite alternate ease-in-out;
     text-align: center;
+    white-space: pre;
+
 }
 
 .fire {
@@ -32,11 +34,15 @@ header {
   font-size: 1vw;
 }
 
+b, h1, h2 {
+  animation: flicker 0.1s infinite alternate ease-in-out;
+}
+
 body {
   color: #70c0cf;
-  background-color: #FFFFFF;
+  background-color: #000000;
   opacity: 1;
-  background-image: linear-gradient(0deg, #000000 90%, #70c0cf 0%);
+  background-image: linear-gradient(0deg, #2a4e5e 0%, #000000 90%);
   background-size: 4px 4px;
   height: 100%;
   width: 100%;
@@ -45,11 +51,14 @@ body {
   animation: moveLines 0.1s linear infinite; /* Anima lo sfondo */
 
   font-family: monospace;
-  white-space: pre;
   text-align: center;
   font-size: 16px;
-  display: background-image;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   place-items: center;
+  flex-direction: column;
 }
 
 header {
