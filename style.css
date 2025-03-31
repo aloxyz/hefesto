@@ -7,11 +7,6 @@
   }
 }
 
-.fire, #text-logo {
-    display: inline-block;
-    animation: flicker 0.1s infinite alternate ease-in-out;
-}
-
 @keyframes flicker {
     0% { 
     color: #70c0cf;
@@ -23,6 +18,19 @@
     }
   }
 
+
+.fire, #text-logo {
+    animation: flicker 0.1s infinite alternate ease-in-out;
+    text-align: center;
+}
+
+.fire {
+  font-size: 2vw;
+}
+
+header {
+  font-size: 1vw;
+}
 
 body {
   background-color: #FFFFFF;
@@ -39,9 +47,16 @@ body {
   white-space: pre;
   text-align: center;
   font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: background-image;
+  place-items: center;
 }
 
+header {
+  border: 0.1rem double;
+  margin: 5%;
+  animation: flicker 0.1s infinite alternate ease-in-out;
+}
 
+section {
+  border-top: solid 0.1px;
+}
