@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+  <audio id="bgm" src="bgm.mp3" autoplay></audio>
   <b>Questo sito è in lavorazione, keep the secret ;p</b>
   <header>
     <div id="fire">
@@ -40,6 +41,10 @@
     <a href="">Chi siamo</a>
     <a href="">Progetti</a>
     <a href="">Contatti</a>
+    <div id="music-container">
+      <b>Musica</b>
+      <button id="playPauseBtn">Play</button>
+    </div>
   </nav>
 
   <hr>
@@ -65,3 +70,18 @@
   </footer>
 </body>
 </html>
+
+<script>
+  const audio = document.getElementById("bgm");
+  const btn = document.getElementById("playPauseBtn");
+  
+  btn.addEventListener("click", function() {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = "Pause";
+    } else {
+      audio.pause();
+      btn.textContent = "Play";
+    }
+  });
+</script>

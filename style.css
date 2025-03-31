@@ -74,6 +74,34 @@ header {
   white-space: pre;
 }
 
+#music-container {
+  display: flex;
+  border: solid 0.1em var(--color-light);
+  margin-top: 1em;
+  padding: 1em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.0);
+  border: double 0.3em var(--color-light);
+  color: var(--color-dark);
+  max-height: 2em;
+  padding: 1em;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: var(--color-light);
+  color: var(--bg-gradient-start);
+  cursor: pointer;
+  border: double 0.3em var(--bg-gradient-start);
+}
+
 h2 {
   font-size: large;
   position: relative;
