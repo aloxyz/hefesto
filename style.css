@@ -20,7 +20,7 @@
 
 
 #fire, #text-logo {
-    animation: flicker 0.1s infinite alternate ease-in-out;
+    animation: flicker 0.03s infinite alternate ease-in-out;
     text-align: center;
     white-space: pre;
 
@@ -35,8 +35,34 @@ header {
 }
 
 b, h1, h2 {
-  animation: flicker 0.1s infinite alternate ease-in-out;
+  animation: flicker .03s infinite alternate ease-in-out;
 }
+
+h2 {
+  font-size: large;
+}
+
+h2::after {
+  margin-left: 0.2em;
+  content: "";
+  width: 0.3em;
+  height: 0.8em;
+  background: #70c0cf;
+  display: inline-block;
+  animation: cursor-blink 0.3s infinite alternate ease-in-out;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    color: #a0f0ff;
+    text-shadow: 0 0 20px rgba(200, 200, 255, 1);
+    }
+}
+
+
 
 body {
   color: #70c0cf;
@@ -52,7 +78,7 @@ body {
 
   font-family: monospace;
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
 
   display: flex;
   justify-content: center;
@@ -63,8 +89,9 @@ body {
 
 header {
   border: 0.1rem double;
-  margin: 5%;
+  margin: 10em;
   animation: flicker 0.1s infinite alternate ease-in-out;
+  max-width: 80em;
 }
 
 section {
@@ -73,6 +100,7 @@ section {
   overflow-wrap: break-word; /* Per garantire il wrapping su tutti i browser */
   text-align: center;
   white-space: normal; /* Assicura che il testo vada a capo */
+  max-width: 50em;
 }
 
 main {
