@@ -162,9 +162,9 @@ footer {
 /*========================================
   Responsive Adjustments
 ========================================*/
-@media (max-width: 80vh) {
+@media (max-width: 600px) {
   #text-logo {
-    font-size: 1vw;
+    font-size: 0.8vw;
   }
   body {
     margin: 5em auto;
