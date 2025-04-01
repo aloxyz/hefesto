@@ -155,15 +155,16 @@ footer {
 /*========================================
   Responsive Adjustments
 ========================================*/
-/* @media (max-width: 600px) { */
-  /* #text-logo {
-    font-size: 0.5em;
-  } */
-  /* body {
-    margin: 5em auto;
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: portrait) {
+  #text-logo {
+      font-size: 0.6vh;
   }
-} */
-
+}
 
 /*========================================
   Animations
