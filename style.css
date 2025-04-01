@@ -44,6 +44,9 @@ header {
   padding: 1rem;
   /* margin: 1rem auto; */
   cursor:not-allowed;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 #fire {
@@ -92,7 +95,8 @@ button:hover {
 
 h2 {
   font-size: large;
-  position: relative;  
+  position: relative; 
+  color: var(--color-light) 
 }
 
 h2::after {
@@ -110,6 +114,13 @@ a, b {
   animation: flicker 0.03s infinite alternate ease-in-out;
 }
 
+.notice {
+  color:#b23232;
+  text-shadow: 0 0 8px #e00c0cba;
+  font-weight: bolder;
+  font-size: smaller;
+
+}
 main {
   width: 70%;
   max-width: 50rem;
@@ -163,8 +174,9 @@ footer {
   and (-webkit-device-pixel-ratio: 2) 
   and (orientation: portrait) {
   #text-logo {
-      font-size: 0.6vh;
+      font-size: 0.3vh;
   }
+
 }
 
 /*========================================
