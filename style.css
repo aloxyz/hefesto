@@ -58,6 +58,7 @@ header {
   animation: flicker 0.03s infinite alternate ease-in-out;
   font-size: 0.3rem;
   white-space: pre;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 #music-container {
