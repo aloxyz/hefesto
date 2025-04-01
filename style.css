@@ -42,10 +42,12 @@ header {
   text-align: center;
   border: 0.2rem double;
   padding: 1rem;
-  /* margin: 1rem auto; */
+  width: 25em;
   cursor:not-allowed;
   display: flex;
   flex-direction: column;
+  justify-items: center;
+  align-items: center;
   gap: 1em;
 }
 
@@ -93,6 +95,13 @@ button:hover {
   border: double 0.3em var(--bg-gradient-start);
 }
 
+header > h1 {
+  text-align: center;
+  letter-spacing: 0.8em;
+  margin-left: 1.1rem;
+  display: block;
+}
+
 h2 {
   font-size: large;
   position: relative; 
@@ -122,7 +131,7 @@ a, b {
 
 }
 main {
-  width: 70%;
+  width: 90%;
   max-width: 50rem;
   display: flex;
   flex-direction: column;
