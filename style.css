@@ -52,11 +52,12 @@ header {
   font-weight: 1000;
   font-size: 0.8rem;
   white-space: pre;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 #text-logo {
   animation: flicker 0.03s infinite alternate ease-in-out;
-  font-size: 0.3rem;
+  font-size: 1vw;
   white-space: pre;
   font-family: 'Courier New', Courier, monospace;
 }
