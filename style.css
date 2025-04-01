@@ -15,13 +15,6 @@
   box-sizing: border-box;
 }
 
-html {
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
-
 /*========================================
   Base Styles
 ========================================*/
@@ -67,9 +60,9 @@ header {
 
 #text-logo {
   animation: flicker 0.03s infinite alternate ease-in-out;
-  font-size: 1vw;
-  white-space: pre;
-  font-family: 'Courier New', Courier, monospace;
+  font-size: 1vw !important;
+  white-space: pre !important;
+  font-family: 'Courier New', Courier, monospace !important;
   display: block;
 }
 
